@@ -2,6 +2,7 @@ const test = require('ava');
 
 const { default: a } = require('../dist/index');
 
-test('xxx', (t) => {
-	t.pass();
+test('redis remove', async (t) => {
+	const r = await a('key');
+	t.is(r, true);
 });
