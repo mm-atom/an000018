@@ -6,7 +6,7 @@ const logger = getLogger();
 const REDIS = config.redis;
 
 export default function an18(key: string) {
-	return new Promise<boolean>((resolve, reject) => {
+	return new Promise<boolean>((resolve) => {
 		const client = open();
 		return client.del(key, (error, res) => {
 			if (error) {
